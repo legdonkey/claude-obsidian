@@ -61,3 +61,13 @@ When the user opens this project for the first time:
 - Community early-access mirror (Pro): https://github.com/AI-Marketing-Hub
 - Pattern source: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
 - Cross-reference: https://github.com/kepano/obsidian-skills (authoritative Obsidian-specific skills)
+
+## 私有维护规范（fork 私有化）
+
+本仓库是 `AgriciDaniel/claude-obsidian` 的私有 fork（`origin` = `legdonkey/claude-obsidian`，`upstream` 只读且 push=`DISABLED`）。维护时遵守：
+
+1. **私有内容隔离**：新增私有文件一律进 `private/`（本指针段除外）；不往 upstream 维护的目录里新建私有文件。
+2. **必改上游的登记入账**：确需直接改 upstream 文件（配置、版本号、补丁等）时，登记到 [`private/CHANGES-REGISTRY.md`](private/CHANGES-REGISTRY.md) 并定升级冲突策略。
+3. **永不 force-push、永不移动已发布 tag**；私有主干只 merge 不 rebase。
+
+完整流程（远端/分支/升级/私有版本号/高冲突清单）见 [`private/README.md`](private/README.md)。中文译文在 `private/translations/`。
